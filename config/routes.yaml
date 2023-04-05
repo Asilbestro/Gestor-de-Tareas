@@ -1,0 +1,13 @@
+#index:
+#    path: /tasks
+#    controller: App\Controller\TasktController::index
+
+tasks:
+    path: /tasks
+    controller: App\Controller\TaskController::index
+
+register:
+    path: /registro
+    controller: App\Controller\UserController::register
+
+
