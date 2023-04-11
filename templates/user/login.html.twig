@@ -12,13 +12,9 @@
     <h2>Login de usuarios</h2>
 
     {% if error %}
-        <div>
+        <div class="alert alert-error">
             {{ error.messagekey|trans(error.messageData, 'security') }}
         </div>
-    {% endif %}
-
-    {% if app.user %}
-        {{ dump(app.user) }}
     {% endif %}
 
     <form action="{{ path('login') }}" method="POST">

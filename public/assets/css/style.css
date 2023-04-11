@@ -44,9 +44,9 @@ input[type="submit"]:hover {
     font: 18px/1.5 sans-serif;
 }
 
-#menu{
-    margin:0px;
-    padding:0px;
+#menu {
+    margin: 0px;
+    padding: 0px;
     list-style: none;
     background: #eee;
     width: 90%;
@@ -63,12 +63,61 @@ input[type="submit"]:hover {
     border-right: 1px solid #ccc;
 }
 
-#menu li a{
+#menu li a {
     display: block;
     color: #444;
     text-decoration: none;
 }
 
-#menu li:hover{
+#menu li:hover {
     background-color: #ddd;
+}
+
+.right {
+    float: right !important;
+}
+
+table {
+    width: 100%;
+}
+
+table th,
+table td {
+    background-color: #f6f6f6;
+    padding: 15px;
+    padding-right: 25px;
+    text-align: center;
+}
+
+table td {
+    background-color: #e9ffea;
+}
+
+.button a {
+    padding: 5px;
+    text-decoration: none;
+    color: white;
+}
+
+.button .btn-show {
+    background-color: #00AA33;
+    border: 1px solid #3ef900;
+}
+
+.button{
+    width: 33%;
+}
+
+.button .btn-edit {
+    background-color: #dbd538;
+    border: 1px solid #f3e305;
+}
+
+.button .btn-delete {
+    background-color: #e31f1f;
+    border: 1px solid #ff0000;
+}
+
+.data-task {
+    color: #b8b5b5;
 }

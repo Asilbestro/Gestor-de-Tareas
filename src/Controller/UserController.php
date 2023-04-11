@@ -11,6 +11,8 @@ use Doctrine\ORM\EntityManagerInterface;
 use App\Entity\User;
 use App\Form\RegisterType;
 use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
+use Symfony\Component\Security\Http\Authentication\AuthenticationUtils;
+
 
 class UserController extends AbstractController
 {
@@ -50,5 +52,17 @@ class UserController extends AbstractController
         return $this->render('user/register.html.twig', [
             'form' => $form->createView()
         ]);
+    }
+
+    public function login(AuthenticationUtils $autenticationsUtils)
+    {
+        $error = $autenticationsUtils->getLastAuthenticationError();
+
+        $lastUsername = $autenticationsUtils->getLastUsername();
+
+        return $this->render('user/login.html.twig', array(
+            'error' => $error,
+            'last_username' => $lastUsername
+        ));
     }
 }
